@@ -1,13 +1,19 @@
 import {connect} from 'react-redux';
 import AddColorForm from '../components/add/AddColorForm';
+import {handleNewChange, addHandler} from '../actions';
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
     newColor: state.newColor
   };
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = {
+  handleNewChange,
+  addHandler
+};
+
+/*const mapDispatchToProps = (dispatch) => {
   return {
     addHandler: () => {
       dispatch((dispatch, getState) => {
@@ -23,7 +29,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       value
     })
   };
-};
+};*/
 
 const AddContainer = connect(
   mapStateToProps,

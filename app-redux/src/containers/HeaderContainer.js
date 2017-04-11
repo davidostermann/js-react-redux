@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import Header from '../components/header/Header';
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
     objStyle: state.objStyle
   };
