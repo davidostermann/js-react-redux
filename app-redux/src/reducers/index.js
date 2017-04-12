@@ -1,9 +1,5 @@
 import {combineReducers} from 'redux';
 
-const getNextId = (collection) => {
-  return collection.reduce( (acc, item) => Math.max(acc, item.id), 0) + 1;
-};
-
 function newColor(state = {} , action) {
   switch (action.type) {
   case 'CHANGE_NEW_COLOR':
@@ -16,7 +12,7 @@ function newColor(state = {} , action) {
 function colors(state = [] , action) {
   switch (action.type) {
   case 'ADD_COLOR':
-    return [...state, {...action.color, id: getNextId(state)}];
+    return [...state, action.color];
   default:
     return state;
   }

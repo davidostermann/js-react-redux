@@ -12,15 +12,6 @@ const mapDispatchToProps = {
   changeColor
 };
 
-/*const mapDispatchToProps = (dispatch) => {
-  return {
-    changeColor: (col) => dispatch({
-      type: 'CHANGE_COLOR',
-      col
-    })
-  };
-};*/
-
 const ListContainer = connect(
   mapStateToProps,
   mapDispatchToProps
